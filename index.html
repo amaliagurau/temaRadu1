@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tema4</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-secondary">
+            <div class="col d-flex text-white">
+                <div class="flex-grow-1 p-2">COMPANY LOGO</div>
+                <div class="p-2">ABOUT</div>
+                <div class="p-2">SERVICES</div>
+                <div class="p-2">INFO</div>
+                <div class="p-2">FAQ</div>
+                <div class="p-2">CONTACT</div>
+            </div>
+        </div>
+        <div class="row bg-light">
+            <div
+                class="col .my-slider bg-grey d-flex flex-column justify-content-center align-content-center flex-wrap text-center">
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                <br>
+                <br>
+                <h3 class="pt-4 text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="pt-4 text-uppercase">Lorem ipsum dolor sit amet</h3>
+                <h4 class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row g-6">
+                <div class="col-4">
+                    <div class="col-4 placeholder col-12 box_slider"></div>
+                </div>
+                <div class="col-4">
+                    <div class="col-4 placeholder col-12 box_slider"></div>
+                </div>
+                <div class="col-4">
+                    <div class="col-4 placeholder col-12 box_slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid mt-4 bg-secondary">
+        <div class="row">
+            <div class="col">
+                <div class="container py-6">
+                    <div class="row">
+                        <div class="col-4 ">
+                            <div class="card">
+                                <img src="" alt="" class="card-img-top placeholder w-100 img-height">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4  ">
+                            <div class="card">
+                                <img src="" alt="" class="card-img-top placeholder w-100 img-height">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 ">
+                            <div class="card">
+                                <img src="" alt="" class="card-img-top placeholder w-100 img-height">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+        const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                alert('Nice, you triggered this alert message!', 'success')
+            })
+        }
+    </script>
+    <div class="container">
+        <div class="row g-3 bottom">
+            <div class="col-4 ">
+                <div class="col-4 placeholder col-9 box_slider"></div>
+            </div>
+            <div class="col-2">
+                <div class="col-2">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit.</div>
+            </div>
+            <div class="col-4">
+                <div class="col-4 placeholder col-9 box_slider"></div>
+            </div>
+            <div class="col-2">
+                <div class="col-2">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit.</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
